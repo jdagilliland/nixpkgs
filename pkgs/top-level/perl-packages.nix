@@ -9304,6 +9304,19 @@ let self = _self // overrides; _self = with self; {
     };
   };
 
+  MP3Info = buildPerlPackage rec {
+    name = "MP3-Info-1.24";
+    src = fetchurl {
+      url = "mirror://cpan/authors/id/D/DA/DANIEL/${name}.tar.gz";
+      # url = "http://search.cpan.org/CPAN/authors/id/D/DA/DANIEL/MP3-Info-1.24.tar.gz";
+      sha256 = "1y15kx82682n7bmiykn6nnw8xdmkhhk6w4faga4xficvbjzz86k7";
+    };
+    meta = {
+      description = "Manipulate / fetch info from MP3 audio files";
+      license = with stdenv.lib.licenses; [ free ];
+    };
+  };
+
   MROCompat = buildPerlPackage {
     name = "MRO-Compat-0.12";
     src = fetchurl {
