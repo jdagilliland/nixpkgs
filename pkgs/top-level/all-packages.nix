@@ -12985,6 +12985,10 @@ in
 
   gksu = callPackage ../applications/misc/gksu { };
 
+  gnupod = callPackage ../applications/audio/gnupod {
+    inherit (perlPackages) DigestSHA1 UnicodeString MP3Info DateTimeFormatDateParse;
+  };
+
   gnuradio = callPackage ../applications/misc/gnuradio {
     inherit (python2Packages) cheetah lxml matplotlib numpy python pyopengl pyqt4 scipy wxPython pygtk;
     fftw = fftwFloat;
